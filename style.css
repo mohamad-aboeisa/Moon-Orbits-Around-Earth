@@ -1,0 +1,114 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+/* End Rests */
+
+body {
+  min-height: 100vh;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background: url("space.jpg");
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.earth,
+.earth2 {
+  background-color: rgb(58, 179, 220);
+  background: url(earth.jpg) center / 230px no-repeat;
+  width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.moon-container {
+  position: absolute;
+  width: 220px;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  transform-origin: center;
+  animation: spin 10s linear infinite;
+}
+
+.moon,
+.moon2 {
+  width: 25px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: white;
+  background: url("moon.png") center/40px no-repeat;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+.earth2 {
+  display: grid;
+  place-items: center;
+}
+.moon2 {
+  --speed: 10s;
+  animation: orbit var(--speed) linear infinite;
+}
+
+.moon-container:hover {
+  animation-play-state: paused;
+}
+
+.earth2:hover .moon2 {
+  --speed: 60s;
+}
+
+/* keyframes */
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translate(-100px, -100px);
+  }
+
+  to {
+    transform: rotate(360deg) translate(-100px, -100px);
+  }
+}
