@@ -11,7 +11,7 @@ It also includes interactive hover effects and visual enhancements like glow usi
 
 ## 🚀 Live Demo
 
-> *(Add your GitHub Pages link here)*
+[Click Here](https://mohamad-aboeisa.github.io/Moon-Orbits-Around-Earth/)
 
 ---
 
@@ -102,7 +102,7 @@ transform: rotate(...) translate(...);
 
 ## 📸 Preview
 
-> *(Add a GIF here — highly recommended for animations)*
+![Preview](Preview.png)
 
 ---
 
